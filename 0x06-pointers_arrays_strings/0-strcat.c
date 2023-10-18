@@ -13,10 +13,10 @@ char *_strcat(char *dest, char *src)
 	w = 0;
 
 	while (*(dest + l) != '\0')
-				l++;
+		l++;
 
 	while (*(src + w) != '\0' && l < 97)
-			
+
 	{
 		*(dest + l) = *(src + w);
 		lengthD++;
