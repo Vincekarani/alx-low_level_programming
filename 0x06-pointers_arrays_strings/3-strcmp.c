@@ -1,28 +1,18 @@
 #include "main.h"
+
 /**
- * _strncat - concatenate strings, defining the size of second string.
- * @dest: string with concatenation
- * @src: string to be concatenated
- * @n: size of second string
- * Return: Always 0.
+ * _strcmp - function to copy string
+ * @s1: first string to compare
+ * @s2: second string to compare
+ * Return: int
  */
-char *_strncat(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int l, w;
-
-	l = 0;
-	w = 0;
-
-	while (*(dest + l) != '\0')
-		l++;
-
-	while (*(src + w) != '\0' && l < 97 && w < n)
+	while (*s1 && *s1 == *s2)
 	{
-		*(dest + l) = *(src + w);
-		l++;
-		w++;
+		++s1;
+		++s2;
 	}
-	*(dest + l) = '\0';
-	return (dest);
+	return ((int)(unsigned char)(*s1) - (int)(unsigned char)(*s2));
 }
 
