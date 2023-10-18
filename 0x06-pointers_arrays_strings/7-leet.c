@@ -16,8 +16,8 @@ char *leet(char *c)
 		l = 0;
 		while (l < 5)
 		{
-			if (c[k] == a[j] || c[k] == b[l])
-				c[k] = leet[j];
+			if (c[k] == a[l] || c[k] == b[l])
+				c[k] = leet[l];
 			l++;
 		}
 		k++;
