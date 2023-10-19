@@ -7,9 +7,10 @@
  */
 char *rot13(char *c)
 {
-	int u, v;
+	int u;
+	Int v;
 	char rot_13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm",
-	     alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	     	alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 	for (u = 0; c[u] != '\0'; u++)
 	{
@@ -17,7 +18,7 @@ char *rot13(char *c)
 		{
 			if (alphabet[v] == c[u])
 			{
-				c[u] = rot_13[];
+				c[u] = rot_13[v];
 				break;
 			}
 		}
