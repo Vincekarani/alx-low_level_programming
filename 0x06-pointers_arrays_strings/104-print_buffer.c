@@ -10,41 +10,43 @@
 
 void print_buffer(char *b, int size)
 {
-	int q, m, k;
+	int o;
+	int j;
+	int i;
 
-	q = 0;
+	o = 0;
 
 	if (size <= 0)
 	{
 		printf("\n");
 		return;
-	}
-	while (q < size)
-	{
-		m = size - q < 10 ? size - q : 10;
-		printf("%08x: ", q);
-		for (k = 0; k < 10; k++)
+		while (o < size)
 		{
-			if (k < m)
-				printf("%02x", *(b + q + k));
-			else
-				printf(" ");
-			if (k % 2)
+			j = size - o < 10 ? size - o : 10;
+			printf("%08x: ", o);
+			for (i = 0; i < 10; i++)
 			{
+				if (i < j)
+				printf("%02x", *(b + o + i));
+				else
+					printf(" ");
+				if (i % 2)
+				{
 				printf(" ");
+				}
 			}
-		}
-		for (k = 0; k < m; k++)
-		{
-			int c = *(b + q + k);
+			for (i = 0; i < j; i++)
+			{
+			int c = *(b + o + i);
 
 			if (c < 32 || c > 132)
 			{
 				c = '.';
 			}
 			printf("%c", c);
+			}
+			printf("\n");
+			o += 10;
 		}
-		printf("\n");
-		q += 10;
 	}
 }
