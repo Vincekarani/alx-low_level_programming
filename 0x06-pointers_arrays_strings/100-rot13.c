@@ -8,9 +8,9 @@
 char *rot13(char *c)
 {
 	int u;
-	Int v;
+	int v;
 	char rot_13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm",
-	     	alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 	for (u = 0; c[u] != '\0'; u++)
 	{
