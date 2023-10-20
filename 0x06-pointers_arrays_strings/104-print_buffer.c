@@ -11,7 +11,7 @@
 void print_buffer(char *b, int size)
 {
 	int o;
-	int j;
+	int r;
 	int q;
 
 	o = 0;
@@ -22,7 +22,7 @@ void print_buffer(char *b, int size)
 	}
 	while (o < size)
 	{
-		r = size - o < 10 ? size - o : 10;
+		q = size - o < 10 ? size - o : 10;
 		printf("%08x:", o);
 		for (q = 0; q < 10; q++)
 		{
