@@ -11,7 +11,9 @@ void print_buffer(char *b, int size)
 	int o;
 	int r;
 	int q;
+
 	o = 0;
+
 	if (size <= 0)
 	{
 		printf("\n");
@@ -35,6 +37,7 @@ void print_buffer(char *b, int size)
 		for (q = 0; q < r; q++)
 		{
 			int c = *(b + o + q);
+
 			if (c < 32 || c > 132)
 			{
 				c = '.';
