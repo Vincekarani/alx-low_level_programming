@@ -13,7 +13,6 @@ void print_buffer(char *b, int size)
 	int q;
 
 	o = 0;
-
 	if (size <= 0)
 	{
 		printf("\n");
@@ -26,12 +25,12 @@ void print_buffer(char *b, int size)
 		for (q = 0; q < 10; q++)
 		{
 			if (q < r)
-				printf("%02x", *(b + o + q));
+			printf("%02x", *(b + o + q));
 			else
-				printf(" ");
+			printf(" ");
 			if (q % 2)
 			{
-				printf(" ");
+			printf(" ");
 			}
 		}
 		for (q = 0; q < r; q++)
@@ -40,7 +39,7 @@ void print_buffer(char *b, int size)
 
 			if (c < 32 || c > 132)
 			{
-				c = '.';
+			c = '.';
 			}
 			printf("%c", c);
 		}
