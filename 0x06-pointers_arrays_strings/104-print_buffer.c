@@ -1,55 +1,48 @@
+#include "main.h"
 #include <stdio.h>
-#include <ctype.h>
 
+/**
+ * print_buffer - prints buffer
+ * @b: buffer
+ * @size: size
+ * Return: void
+ */
 void print_buffer(char *b, int size)
 {
+	int offset, j, i;
+
+	offset = 0;
 	if (size <= 0)
 	{
-	printf("\n");
-	return;
-	}
-	int i;
-
-	for (i = 0; i < size; i++)
-	{
-	/*
-	* Print the position in hexadecimal (8 chars)
-	*/
-	printf("%08X ", i);
-	 int j;
-
-	for (j = 0; j < 10 && i < size; j++, i++)
-	}
-	{
-	/*
-	* Print the hexadecimal content of the buffer, 2 bytes at a time
-	*/
-	printf("%02X ", (unsigned char)b[i]);
-	/*
-	* Print the the buffer, replace non-printable chars with '.'
-	*/
-		if (isprint(b[i]))
-		{
-		printf("%c", b[i]);
-		}
-		else
-		{
-		printf(".");
-		}
-	}
-		{
 		printf("\n");
+		return;
+	}
+	while (offset < size)
+	{
+		j = size - offset < 10 ? size - offset : 10;
+		printf("%08x: ", offset);
+		for (i = 0; i < 10; i++)
+		{
+			if (i < j)
+				printf("%02x", *(b + offset + i));
+			else
+				printf(" ");
+			if (i % 2)
+			{
+				printf(" ");
+			}
 		}
-	{
+		for (i = 0; i < j; i++)
+		{
+			int c = *(b + offset + i);
 
-	{
-	char buffer[] = "This is a test buffer to print.";
-	int size = sizeof(buffer) - 1;
-
-	/*
-	* Excluding the null terminato
-	*/
-	print_buffer(buffer, size);
-	return (0);
+			if (c < 32 || c > 127)
+			{
+				c = '.';
+			}
+			printf("%c", c);
+		}
+		printf("\n");
+		offset += 10;
 	}
 }
