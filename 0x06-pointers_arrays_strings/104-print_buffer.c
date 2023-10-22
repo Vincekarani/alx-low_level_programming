@@ -13,7 +13,7 @@ void print_line(char *c, int s, int b)
 {
 	int j, k;
 
-	for (j = 0; j <= 10; j++)
+	for (j = 0; j <= 9; j++)
 	{
 		if (j <= s)
 			printf("%02x", c[b * 10 + j]);
