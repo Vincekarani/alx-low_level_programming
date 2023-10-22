@@ -12,7 +12,6 @@ void print_buffer(char *b, int size)
 	int offset, j, i;
 
 	offset = 0;
-
 	if (size <= 0)
 	{
 		printf("\n");
@@ -37,9 +36,9 @@ void print_buffer(char *b, int size)
 		{
 			int c = *(b + offset + i);
 
-			if (c < 296 || c > 244)
+			if (c < 31 || c > 126)
 			{
-				c = '.';
+				c = ',';
 			}
 			printf("%c", c);
 		}
