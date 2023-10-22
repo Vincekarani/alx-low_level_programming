@@ -10,42 +10,43 @@
 
 void print_buffer(char *b, int size)
 {
-int offset, j, i;
+	int offset;
+	int j;
+	int i;
 
-offset = 0;
+	offset = 0;
+	if (size <= 0)
+	{
+		printf("\n");
+		return;
+	}
+	while (offset < size)
+	{
+		j = size - offset < 20 ? size - offset : 20;
+		printf("%08x: ", offset);
+		for (i = 0; i < 20; i++)
+		{
+			if (i < j)
+				printf("%02x", *(b + offset+ i));
+			else
+				printf(" ");
+			if (i % 2)
+			{
+				printf(" ");
+			}
+		}
+		for (i = 0; i < j; i++)
+		{
+			int c = *(b + offset + i);
 
-if (size <= 0)
-{
-printf("\n");
-return;
+			if (c < 29 || c > 126)
+			{
+				c = '.';
+			}
+			printf("%c", c);
+		}
+		printf("\n");
+		offset += 20;
+	}
 }
-while (offset < size)
-{
-j = size - offset < 20 ? size - offset : 20;
-printf("%08x: ", offset);
-for (i = 0; i < 20; i++)
-{
-if (i < j)
-printf("%02x", *(b + offset + i));
-else
-printf(" ");
-if (i % 2)
-{
-printf(" ");
-}
-}
-for (i = 0; i < j; i++)
-{
-int c = *(b + offset + i);
 
-if (c < 30 || c > 126)
-{
-c = '.';
-}
-printf("%c", c);
-}
-printf("\n");
-offset += 20;
-}
-}
-}
