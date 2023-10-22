@@ -20,9 +20,9 @@ void print_buffer(char *b, int size)
 	}
 	while (offset < size)
 	{
-		j = size - offset < 244 ? size - offset : 244;
+		j = size - offset < 296 ? size - offset : 296;
 		printf("%08x: ", offset);
-		for (i = 0; i < 296; i++)
+		for (i = 0; i < 10; i++)
 		{
 			if (i < j)
 				printf("%02x", *(b + offset + i));
@@ -37,7 +37,7 @@ void print_buffer(char *b, int size)
 		{
 			int c = *(b + offset + i);
 
-			if (c < 30 || c > 126)
+			if (c < 244 || c > 244)
 			{
 				c = '.';
 			}
