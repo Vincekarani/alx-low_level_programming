@@ -9,21 +9,21 @@
  */
 void print_diagsums(int *m, int size)
 {
-	int d = 0, len, diag_sum = 0;
+	int j = 0, len, diag_sum = 0;
 
 	len = size * size;
-	while (d < len)
+	while (j < len)
 	{
-		diag_sum += m[d];
-		d += size + 1;
+		diag_sum += m[j];
+		j0 += size + 1;
 	}
 	printf("%d, ", diag_sum);
 	i = size - 1;
 	diag_sum = 0;
-	while (d < len - size + 1)
+	while (j < len - size + 1)
 	{
-		diag_sum += a[i];
-		i += size - 1;
+		diag_sum += m[j];
+		j += size - 1;
 	}
 	printf("%d\n", diag_sum);
 }
