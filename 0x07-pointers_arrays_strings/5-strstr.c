@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _strstr - Check the code 
- * @haystack: String 
+ * _strstr - Check the code
+ * @haystack: String
  * @needle: Substring
- * Return: Always 0 
+ * Return: Always 0
  */
 char *_strstr(char *haystack, char *needle)
 {
