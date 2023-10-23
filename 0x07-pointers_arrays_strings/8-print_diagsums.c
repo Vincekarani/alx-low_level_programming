@@ -8,21 +8,21 @@ m#include "main.h"
  */
 void print_diagsums(int *a, int size)
 {
-	int k = 0, len, diag_sum = 0;
+	int i = 0, len, diag_sum = 0;
 
 	len = size * size;
-	while (k < len)
+	while (i < len)
 	{
-		diag_sum += a[k];
-		k += size + 1;
+		diag_sum += a[i];
+		i += size + 1;
 	}
 	printf("%d, ", diag_sum);
-	k = size - 1;
+	i = size - 1;
 	diag_sum = 0;
-	while (k < len - size + 1)
+	while (i < len - size + 1)
 	{
-		diag_sum += a[k];
-		k += size - 1;
+		diag_sum += a[i];
+		i += size - 1;
 	}
 	printf("%d\n", diag_sum);
 }
