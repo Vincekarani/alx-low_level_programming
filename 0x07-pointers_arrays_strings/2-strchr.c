@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - check the code
+ * _strchr - check the code
  * @s: String
  * @c: Character
  * Return: Pointer to first occurrence or NULL
