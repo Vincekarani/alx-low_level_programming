@@ -1,4 +1,4 @@
-m#include "main.h"
+#include "main.h"
 #include <stdio.h>
 /**
  * print_diagsums - prints the sum of the 2 diagonals of a square array
@@ -8,7 +8,9 @@ m#include "main.h"
  */
 void print_diagsums(int *a, int size)
 {
-	int i = 0, len, diag_sum = 0;
+	int i = 0;
+	int len;
+	int diag_sum = 0;
 
 	len = size * size;
 	while (i < len)
