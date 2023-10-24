@@ -1,4 +1,4 @@
-##- Even more pointers, arrays and strings0
+## Even more pointers, arrays and strings0
 
 ## Concepts
 For this project, we expect you to look at these concepts:
