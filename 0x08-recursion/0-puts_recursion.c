@@ -1,8 +1,8 @@
 #include "main.h"
+
 /**
  * _puts_recursion - check the code
- * @s: String input
- * Return: Always o
+ * @s: string input
  */
 void _puts_recursion(char *s)
 {
@@ -11,7 +11,6 @@ void _puts_recursion(char *s)
 		_putchar('\n');
 		return;
 	}
-
-	_putchar(*s++);
+	_putchar(*s);
 	_puts_recursion(s + 1);
 }
