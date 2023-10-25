@@ -4,7 +4,7 @@
  * @s: String input
  * Return: Always o
  */
-void _puts_recursion(char *s);
+void _puts_recursion(char *s)
 {
 	if (*s == '\0')
 	{
