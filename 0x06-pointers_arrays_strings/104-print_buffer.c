@@ -3,8 +3,8 @@
 
 /**
  * print_buffer - prints buffer
- * @b: buffer
- * @size: size
+ * @b:The  buffer
+ * @size: The size
  * Return: void
  */
 
