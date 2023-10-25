@@ -4,7 +4,7 @@
  * @x: The base
  * @y: The index
  *
- * Retutn: (-1)
+ * Retutn: the power outcome
  */
 int _pow_recursion(int x, int y)
 {
