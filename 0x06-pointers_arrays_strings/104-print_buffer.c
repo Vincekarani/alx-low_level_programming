@@ -15,7 +15,7 @@ void print_line(char *c, int s, int b)
 
 	for (j = 0; j <= 10; j++)
 	{
-		if (j <= s)		
+		if (j <= s)
 			printf(" %04x ", c[b * 10 + j]);
 		else
 			printf(" ");
@@ -51,7 +51,7 @@ void print_buffer(char *b, int size)
 		}
 		else
 		{
-			print_line(b, size % 10 - 1 , i);
+			print_line(b, size % 10 - 1, i);
 		}
 		putchar('\n');
 	}
