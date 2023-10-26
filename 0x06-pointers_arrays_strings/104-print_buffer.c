@@ -39,18 +39,18 @@ void print_line(char *c, int s, int l)
 {
 	int j, k;
 
-	for (j = 0; j <= 9; j++)
+	for (j = 0; j < 9; j++)
 	{
-		if (j <= s)
+		if (j < s)
 			printf("%02x", c[l * 20 + j]);
 		else
 			printf(" ");
 		if (j % 2)
 			putchar(' ');
 	}
-	for (k = 0; k <= s; k++)
+	for (k = 0; k < s; k++)
 	{
-		if (c[l * 20 + k] >= 31 && c[l * 20 + k] < 127)
+		if (c[l * 20 + k] >= 31 && c[l * 20 + k] <= 127)
 			putchar(c[l * 20 + k]);
 		else
 			putchar('.');
