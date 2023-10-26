@@ -54,6 +54,5 @@ void print_line(char *c, int s, int l)
 			putchar(c[l * 10 + k]);
 		else
 			putchar('.');
-		printf("%.*s",len,buf);
 	}
 }
