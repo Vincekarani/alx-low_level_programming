@@ -46,4 +46,3 @@ printf("\n");
 offset += 10;
 }
 }
-}
