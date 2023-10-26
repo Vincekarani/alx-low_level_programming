@@ -25,7 +25,7 @@ putchar('\n');
 }
 if (size == 0)
 	putchar('\n');
-	}
+}
 /**
  * print_line - prints a s bytes of a buffer
  * @c: the buffer to print
