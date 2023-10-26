@@ -55,4 +55,4 @@ putchar(c[l * 20 + k]);
 else
 putchar('.');
 }
-}}
+}
