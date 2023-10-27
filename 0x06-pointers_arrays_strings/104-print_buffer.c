@@ -4,7 +4,6 @@
  * print_buffer - prints a buffer
  * @b: the buffer to print
  * @size: the size of buffer
- *
  * Return: void
  */
 void print_buffer(char *b, int size)
@@ -28,7 +27,7 @@ void print_buffer(char *b, int size)
 		putchar('\n');
 }
 /**
- * print_line - prints a s bytes of a buffer
+ * print_line - prints  s bytes of a buffer
  * @c: the buffer to print
  * @s: the bytes of buffer to print
  * @l: the line of buffer to print
