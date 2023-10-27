@@ -1,58 +1,49 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * print_buffer - prints a buffer
- * @b: the buffer to print
- * @size: the size of buffer
+ * print_buffer - prints buffer
+ * @b: buffer
+ * @size: size
  * Return: void
  */
 void print_buffer(char *b, int size)
 {
-int i;
+int offset, j, i;
 
-for (i = 0; i <= (size - 1) / 20 && size; i++)
+offset = 0;
+if (size <= 0)
 {
-printf("%08x:", i * 20);
-if (i < size / 2)
-{
-print_line(b, 9, i);
+printf("\n");
+return;
 }
-else
+while (offset < size)
 {
-print_line(b, size % 20 - 1, i);
-}
-putchar('\n');
-}
-if (size == 0)
-	putchar('\n');
-	}
-
-/**
- * print_line - prints a s bytes of a buffer
- * @c: buffer to print
- * @s: bytes of buffer to print
- * @l: the line of buffer to print
- * Return: void
- */
-void print_line(char *c, int s, int l)
+j = size - offset < 10 ? size - offset : 10;
+printf("%08x: ", offset);
+for (i = 0; i < 10; i++)
+	
 {
-int j, k;
-
-for (j = 0; j <= 9; j++)
-{
-if (j <= s)
-printf("%02x", c[l * 20 + j]);
+if (i < j)
+printf("%02x", *(b + offset + i));
 else
 printf(" ");
-if (j % 20)
-putchar(' ');
-}
-for (k = 0; k <= s; k++)
+if (i % 2)
 {
-if (c[l * 20 + k] <= 31 && c[l * 20 + k] => 127)
-putchar(c[l * 20 + k]);
-else
-putchar('.');
+printf(" ");
 }
 }
+for (i = 0; i < j; i++)
+{
+int c = *(b + offset + i);
+
+if (c <= 31 || c => 127)
+{
+c = '.';
+}
+printf("%c", c);
+}
+printf("\n");
+offset + 10;
+}
+}
+
