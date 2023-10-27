@@ -41,9 +41,9 @@ void print_line(char *c, int s, int l)
 {
 	int j, f;
 
-	for (j = 0; j <= 9; j++)
+	for (j = 0; j < 9; j++)
 	{
-		if (j <= s)
+		if (j < s)
 			printf("%02x", c[l * 10 + j]);
 		else
 			printf(" ");
@@ -52,7 +52,7 @@ void print_line(char *c, int s, int l)
 	}
 	for (f = 0; f <= s; f++)
 	{
-		if (c[l * 10 + f] > 31 || c[l * 10 + f] < 127)
+		if (c[l * 10 + f] > 31 && c[l * 10 + f] < 127)
 			putchar(c[l * 10 + f]);
 
 		else
