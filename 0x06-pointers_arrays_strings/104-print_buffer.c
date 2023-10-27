@@ -9,24 +9,24 @@
  */
 void print_buffer(char *b, int size)
 {
-	int i;
+int i;
 
-	for (i = 0; i <= (size - 1) / 20 && size; i++)
-	{
-		printf("%08x:", i * 20);
-		if (i < size / 20)
-		{
-			print_line(b, 9, i);
-		}
-		else
-		{
-			print_line(b, size % 20 - 1, i);
-		}
-		putchar('\n');
-	}
-	if (size == 0)
-		putchar('\n');
+for (i = 0; i <= (size - 1) / 20 && size; i++)
+{
+printf("%08x:", i * 20);
+if (i < size / 2)
+{
+print_line(b, 9, i);
 }
+else
+{
+print_line(b, size % 20 - 1, i);
+}
+putchar('\n');
+}
+if (size == 0)
+	putchar('\n');
+	}
 
 /**
  * print_line - prints a s bytes of a buffer
@@ -37,22 +37,22 @@ void print_buffer(char *b, int size)
  */
 void print_line(char *c, int s, int l)
 {
-	int j, k;
+int j, k;
 
-	for (j = 0; j <= 9; j++)
-	{
-		if (j <= s)
-			printf("%02x", c[l * 20 + j]);
-		else
-			printf(" ");
-		if (j % 2)
-			putchar(' ');
-	}
-	for (k = 0; k <= s; k++)
-	{
-		if (c[l * 20 + k] >= 31 && c[l * 20 + k] < 127)
-			putchar(c[l * 20 + k]);
-		else
-			putchar('.');
-	}
+for (j = 0; j <= 9; j++)
+{
+if (j <= s)
+printf("%02x", c[l * 20 + j]);
+else
+printf(" ");
+if (j % 20)
+putchar(' ');
+}
+for (k = 0; k <= s; k++)
+{
+if (c[l * 20 + k] <= 31 && c[l * 20 + k] => 127)
+putchar(c[l * 20 + k]);
+else
+putchar('.');
+}
 }
