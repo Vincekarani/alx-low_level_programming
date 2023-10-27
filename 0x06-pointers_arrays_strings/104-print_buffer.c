@@ -52,7 +52,7 @@ void print_line(char *c, int s, int l)
 	}
 	for (f = 0; f <= s; f++)
 	{
-		if (c[l * 10 + f] > 31 && c[l * 10 + f] < 127)
+		if (c[l * 10 + f] > 31 || c[l * 10 + f] < 127)
 			putchar(c[l * 10 + f]);
 
 		else
