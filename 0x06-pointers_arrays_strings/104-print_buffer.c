@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * print_buffer - prints a buffer
  * @b: the buffer to print
@@ -11,7 +10,6 @@
 void print_buffer(char *b, int size)
 {
 	int i;
-
 	for (i = 0; i <= (size - 1) / 10 && size; i++)
 	{
 		printf("%08x: ", i * 10);
@@ -28,7 +26,6 @@ void print_buffer(char *b, int size)
 	if (size == 0)
 		putchar('\n');
 }
-
 /**
  * print_line - prints a s bytes of a buffer
  * @c: the buffer to print
@@ -40,10 +37,9 @@ void print_buffer(char *b, int size)
 void print_line(char *c, int s, int l)
 {
 	int j, f;
-
-	for (j = 0; j < 9; j++)
+	for (j = 0; j <= 9; j++)
 	{
-		if (j < s)
+		if (j <= s)
 			printf("%02x", c[l * 10 + j]);
 		else
 			printf(" ");
