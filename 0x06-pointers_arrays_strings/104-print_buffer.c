@@ -35,7 +35,7 @@ void print_buffer(char *b, int size)
 		}
 		for (g = 0; g < h; g++)
 		{
-			int c = *(b + o + g);
+			int c = *(b + offset + g);
 
 			if (c < 32 || c > 132)
 			{
