@@ -2,48 +2,60 @@
 #include <stdio.h>
 
 /**
- * print_buffer - prints buffer
- * @b: the buffer
- * @size: the size
+ * print_buffer - prints a buffer
+ * @b: buffer to print
+ * @size: buffer size 
+ *
+ * Return: void
+ */
+void print_buffer(char *b, int size)
+{
+	int h;
+
+	for (h = 0; h <= (size - 1) / 10 && size; h++)
+	{
+		printf("%08x: ", h * 10);
+		if (h < size / 10)
+		{
+			print_line(b, 9, h);
+		}
+		else
+		{
+			print_line(b, size % 10 - 1, h);
+		}
+		putchar('\n');
+	}
+	if (size == 0)
+		putchar('\n');
+}
+
+/**
+ * print_line - prints s bytes of a buffer
+ * @c: buffer to print
+ * @s: buffer bytes to print
+ * @l: buffer line to print
  * Return: void
  */
 
-void print_buffer(char *b, int size)
+void print_line(char *c, int s, int l)
 {
-	int offset, h, g;
+	int k, f;
 
-	offset = 0;
-	if (size <= 0)
+	for (k = 0; k <= 9; k++)
 	{
-		printf("\n");
-		return;
+		if (k <= s)
+			printf("%02x", c[l * 10 + k]);
+		else
+			printf(" ");
+		if (k % 2)
+			putchar(' ');
 	}
-	while (offset < size)
+	for (f = 0; f <= s; f++)
 	{
-		h = size - offset < 10 ? size - offset : 10;
-		printf("%08x: ", offset);
-		for (g = 0; g < 10; g++)
-		{
-			if (g < h)
-				printf("%02x", *(b + offset + g));
-			else
-				printf(" ");
-			if (g % 2)
-			{
-				printf(" ");
-			}
-		}
-		for (g = 0; g < h; g++)
-		{
-			int c = *(b + offset + g);
+		if (c[l * 10 + f] > 31 && c[l * 10 + f] < 127)
+			putchar(c[l * 10 + f]);
 
-			if (c < 32 || c > 132)
-			{
-				c = '.';
-			}
-			printf("%c", c);
-		}
-		printf("\n");
-		offset += 10;
+		else
+			putchar('.');
 	}
 }
