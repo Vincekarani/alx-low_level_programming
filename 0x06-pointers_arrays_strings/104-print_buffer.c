@@ -4,7 +4,7 @@
 /**
  * print_buffer - prints a buffer
  * @b: buffer to print
- * @size: buffer size 
+ * @size: buffer size
  *
  * Return: void
  */
