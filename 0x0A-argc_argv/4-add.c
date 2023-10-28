@@ -3,11 +3,8 @@
 /**
  * main - adds positive numbers
  * @argc: arguments' number
-<<<<<<< HEAD
+ * @argv: matrix of argument
  * @argv: matrix of arguments
-=======
- * @argv: matrix of arguments 
->>>>>>> 9c4fb6dd59237caddeb3d11de76fff55b74a50a7
  *
  * Return: 0 (Success), or 1 (Success)
  */
