@@ -21,7 +21,7 @@ void print_buffer(char *b, int size)
 		}
 		else
 		{
-			print_line(b, size % 10 - 1, h);
+			print_line(b, size % 10 + 1, h);
 		}
 		putchar('\n');
 	}
