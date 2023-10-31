@@ -28,5 +28,5 @@
 
 * File: [101-keygen.c](./101-keygen.c) is a program that generates random valid passwords for the program 101-crackme.
 
-- File: [./_putchar.c](_putchar.c) contains the _putchar() function definition.
+- File: [_putchar.c](./_putchar.c) contains the _putchar() function definition.
 
