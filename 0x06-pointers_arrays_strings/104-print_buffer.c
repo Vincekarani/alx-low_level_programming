@@ -14,14 +14,14 @@ void print_buffer(char *b, int size)
 
 	for (h = 0; h <= (size - 1) / 10 && size; h++)
 	{
-		printf("%08x:", h * 10);
+		printf("%08x :", h * 10);
 		if (h < size / 10)
 		{
 			print_line(b, 9, h);
 		}
 		else
 		{
-			print_line(b, size%10 + 1, h);
+			print_line(b, size % 10 - 1, h);
 		}
 		putchar('\n');
 	}
