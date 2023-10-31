@@ -34,6 +34,7 @@ void print_buffer(char *b, int size)
  * @c: buffer to print
  * @s: buffer bytes to print
  * @l: buffer line to print
+ *
  * Return: void
  */
 
