@@ -23,5 +23,5 @@ All of the following files are programs written in C:
 | [8-print_square.c](./8-print_square.c) | Prints a sqaure |
 | [9-fizz_buzz.c](9-fizz_buzz.c) | Prints Fizz-Buzz test |
 | [10-print_triangle.c](./10-print_triangle.c) | Prints a triangle |
-| `100-prime_factor.c` | Finds and prints the largest prime factor of the number `612852475143` |
-| `101-print_number.c` | Prints an integer |
+| [100-prime_factor.c](./100-prime_factor.c) | Finds and prints the largest prime factor of the number `612852475143` |
+| [101-print_number.c](./101-print_number.c) | Prints an integer |
