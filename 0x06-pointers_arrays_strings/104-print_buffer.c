@@ -12,7 +12,7 @@ void print_buffer(char *b, int size)
 {
 	int h;
 
-	for (h = 0; h < (size - 1) / 10 && size; h++)
+	for (h = 0; h <= (size - 1) / 10 && size; h++)
 	{
 		printf("%08x ", h * 10);
 		if (h < size / 10)
