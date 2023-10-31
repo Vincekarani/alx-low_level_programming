@@ -10,7 +10,7 @@
 
 * File: `2-strlen.c` is a function that returns the length of a string.
 
-*File: `3-puts.c` is a function that prints a string, followed by a new line, to stdout.
+* File: `3-puts.c` is a function that prints a string, followed by a new line, to stdout.
 
 * File: `4-print_rev.c` is a function that prints a string, in reverse, followed by a new line.
 
