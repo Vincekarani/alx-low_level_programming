@@ -36,7 +36,7 @@ void print_buffer(char *b, int size)
 		{
 			int c = *(b + offset + i);
 
-			if (c < 31 || c > 127)
+			if (c < 31 && c > 127)
 			{
 				c = '.';
 			}
