@@ -13,11 +13,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
 
-	unsigned int x = 0;
+	unsigned int x = 0, y = 0, l1 = 0, l2 = 0;
 
-	y = 0;
-	l1 = 0;
-	l2 = 0;
 	while (s1 && s1[l1])
 		l1++;
 	while (s2 && s2[l2])
@@ -36,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (n < l2 && x < (l1 + n))
 		s[x++] = s2[y++];
 	while (n >= l2 && x < (l1 + l2))
-		s[i++] = s2[y++];
+		s[x++] = s2[y++];
 	s[x] = '\0';
 	return (s);
 }
