@@ -1,30 +1,32 @@
-
 #include "main.h"
 #include <stdio.h>
+
 /**
  * print_buffer - prints buffer
- * @b: the buffer to print
- * @size: the size to print
+ * @b: buffer
+ * @size: size
  * Return: void
  */
+
 void print_buffer(char *b, int size)
 {
-	int offset, k, i;
+	int o, j, i;
 
-	offset = 0;
+	o = 0;
+
 	if (size <= 0)
 	{
 		printf("\n");
 		return;
 	}
-	while (offset < size)
+	while (o < size)
 	{
-		k = size - offset < 10 ? size - offset : 10;
-		printf("%08x: ", offset);
+		j = size - o < 10 ? size - o : 10;
+		printf("%08x: ", o);
 		for (i = 0; i < 10; i++)
 		{
-			if (i < k)
-				printf("%02x", *(b + offset + i));
+			if (i < j)
+				printf("%02x", *(b + o + i));
 			else
 				printf(" ");
 			if (i % 2)
@@ -32,17 +34,17 @@ void print_buffer(char *b, int size)
 				printf(" ");
 			}
 		}
-		for (i = 0; i < k; i++)
+		for (i = 0; i < j; i++)
 		{
-			int c = *(b + offset + i);
+			int c = *(b + o + i);
 
-			if (c < 31 && c > 127)
+			if (c < 32 || c > 132)
 			{
 				c = '.';
 			}
 			printf("%c", c);
 		}
 		printf("\n");
-		offset += 10;
+		o += 10;
 	}
 }
