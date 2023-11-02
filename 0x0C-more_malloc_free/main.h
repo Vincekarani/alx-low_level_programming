@@ -9,8 +9,7 @@ int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int main(int argc, char *argv[]);
 int is_digit(char *s);
-void errors(void);
 int _strlen(char *s);
+void errors(void);
 
 #endif
-
