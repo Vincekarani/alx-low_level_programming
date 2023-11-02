@@ -5,7 +5,7 @@
  * *malloc_checked - allocates memory using malloc
  * @b: memory size
  *
- * Return: a pointer to the newly allocated memory
+ * Return: pointer to memory, else if return exit status 98
  */
 void *malloc_checked(unsigned int b)
 {
