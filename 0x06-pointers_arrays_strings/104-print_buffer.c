@@ -1,20 +1,27 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * isPrintableASCII - determines if n is a printable ASCII char
- * @n: integer
- * Return: 1 if true, 0 if false
+ * isPrintableASCII - determines if n is a printable ASCII char.
+ *
+ * @n: integer produced when printed.
+ *
+ * Return: 1 if true,or otherwise 0 if false.
  */
+
 int isPrintableASCII(int n)
 {
-		return (n >= 32 && n <= 126);
+		return (n >= 31 && n <= 126);
 }
+
 /**
- * printHexes - print hexadecimal values for string b in formatted form
- * @b: print string
- * @start: position to start
- * @end: position to end
+ * printHexes - print hexadecimal values for string b in formatted form.
+ *
+ * @b: print string.
+ * @start: position to start at.
+ * @end: position to end when printed.
  */
+
 void printHexes(char *b, int start, int end)
 {
 	int k = 0;
@@ -27,17 +34,19 @@ void printHexes(char *b, int start, int end)
 			printf(" ");
 		if (k % 2)
 			printf(" ");
-		k++;
+				k++;
 	}
 }
 
 /**
  * printASCII - print ascii values for str b,
- * replace nonprintable chars with '.'
- * @b: string to be printed
- * @start: to start position
- * @end: position to end
+ * to replace nonprintable chars with '.'
+ *
+ * @b: string to be printed.
+ * @start: position to start at.
+ * @end: position to end at when printed.
  */
+
 void printASCII(char *b, int start, int end)
 {
 	int h, k = 0;
@@ -48,15 +57,17 @@ void printASCII(char *b, int start, int end)
 		if (!isPrintableASCII(h))
 			h = 46;
 		printf("%c", h);
-		k++;
+			k++;
 	}
 }
 
 /**
- * print_buffer - prints a buffer
- * @b: the string
- * @size: the buffer size
+ * print_buffer - prints a buffer.
+ *
+ * @b: the string printed.
+ * @size: the buffer size to print.
  */
+
 void print_buffer(char *b, int size)
 {
 	int start, end;
@@ -65,7 +76,7 @@ void print_buffer(char *b, int size)
 	{
 		for (start = 0; start < size; start += 10)
 		{
-			end = (size - start < 10) ? size - start : 10;
+			end = (size - start < 10) ? size - start: 10;
 			printf("%08x: ", start);
 			printHexes(b, start, end);
 			printASCII(b, start, end);
