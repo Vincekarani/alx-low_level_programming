@@ -22,12 +22,12 @@ void print_buffer(char *b, int size)
 	{
 		h = size - offset < 10 ? size - offset : 10;
 		printf("%08x: ", offset);
-		for (g = 0; g <= 10; g++)
+		for (g = 0; g < 10; g++)
 		{
 			if (g < h)
 				printf("%02x", *(b + offset + g));
 			else
-				printf(".");
+				printf(". ");
 			if (g % 2)
 			{
 				printf(" ");
