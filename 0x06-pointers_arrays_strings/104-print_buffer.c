@@ -22,7 +22,7 @@ void print_buffer(char *b, int size)
 	{
 		h = size - offset < 20 ? size - offset : 20;
 		printf("%08x: ", offset);
-		for (g = 0; g < 20; g++)
+		for (g = 0; g < 10; g++)
 		{
 			if (g < h)
 				printf("%02x", *(b + offset + g));
