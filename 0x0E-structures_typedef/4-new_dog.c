@@ -4,8 +4,8 @@
 /**
  * new_dog - creates a new dog
  * @name: dog's name
- * @age: dog's age 
- * @owner: dog's owner 
+ * @age: dog's age
+ * @owner: dog's owner
  *
  * Return: pointer to the new dog (Success), NULL otherwise
  */
@@ -39,7 +39,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 }
 
 /**
- * *_strcpy - copies the string pointed to by srcpy including the terminating null byte (\0) to the buffer pointed to by dest
+ * *_strcpy - copies the string pointed to by srcpy including the
+ * terminating null byte (\0) to the buffer pointed to by dest
  * @dest: pointer to the buffer in which to copy the string
  * @src: string copied
  *
