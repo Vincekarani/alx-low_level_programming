@@ -10,7 +10,7 @@ int op_mod(int a, int b);
  * @a: number 1.
  * @b: number 2.
  *
- * Return: The addition 
+ * Return: The addition
  */
 int op_add(int a, int b)
 {
@@ -32,7 +32,7 @@ int op_sub(int a, int b)
  * @a: The first number.
  * @b: The second number.
  *
- * Return: The multiplication 
+ * Return: The multiplication
  */
 int op_mul(int a, int b)
 {
