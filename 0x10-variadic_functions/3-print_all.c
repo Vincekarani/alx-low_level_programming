@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * print_all - a function that prints anything.
- * @format:  a list of types of arguments passed to the function
- * Return: NULL
- */
+ * * print_all - a function that prints anything.
+ * * @format: a list of types of arguments passed to the function
+ * * Return: NULL
+ * */
 void print_all(const char * const format, ...)
 {
 	int i = 0;
@@ -41,10 +41,11 @@ void print_all(const char * const format, ...)
 				continue;
 		}
 		if ((format[i + 1] != '\0') && (format[i] == 'c' || format[i] == 'i' ||
-					format[i] == 'f' || format[i] == 's'))
+										format[i] == 'f' || format[i] == 's'))
 			printf("%s", separator);
 		i++;
 	}
 	printf("\n");
 	va_end(arg);
 }
+
