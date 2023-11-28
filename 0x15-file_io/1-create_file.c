@@ -11,7 +11,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int f, len = 0, char;
+	int f, len = 0, ch;
 
 	if (filename == NULL)
 		return (-1);
@@ -22,7 +22,7 @@ int create_file(const char *filename, char *text_content)
 		len++;
 	char_printed = write(f, text_content, len);
 	close(f);
-	if (char != -1)
+	if (ch != -1)
 		return (1);
 	else
 		return (-1);
