@@ -24,6 +24,7 @@ void close_elf(int elf);
 void check_elf(unsigned char *e_ident)
 {
 	int index;
+
 	for (index = 0; index < 4; index++)
 	{
 		if (e_ident[index] != 127 &&
@@ -44,6 +45,7 @@ void check_elf(unsigned char *e_ident)
 void print_magic(unsigned char *e_ident)
 {
 	int index;
+
 	printf(" Magic: ");
 	for (index = 0; index < EI_NIDENT; index++)
 	{
@@ -127,7 +129,7 @@ void print_osabi(unsigned char *e_ident)
 	{
 		case ELFOSABI_NONE:
 			printf("UNIX - System V\n");
-			break;case ELFOSABI_HPUX:
+			break;case ELFOSABI_HPUX :
 				printf("UNIX - HP-UX\n");
 			break;
 		case ELFOSABI_NETBSD:
@@ -169,7 +171,7 @@ void print_abi(unsigned char *e_ident)
 }
 /**
  * print_type - Prints the type of an ELF header.
- * @e_type: The ELF type. 
+ * @e_type: The ELF type.
  * @e_ident: an array's pointer containing the ELF class.
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
@@ -245,7 +247,8 @@ void close_elf(int elf)
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-	int q, t;
+	int q, t
+;
 	q = open(argv[1], O_RDONLY);
 	if (q == -1)
 	{
